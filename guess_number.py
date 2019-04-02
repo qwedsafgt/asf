@@ -2,14 +2,17 @@ import random
 the_number=random.randint(1,100)
 while True :
     try:
-        the_number=int(input())
-    except ValueError:
-        print("you must enter an integer!")
+        guess_number=int(input())
+        Judgement_input()
 
-    if the_number < guess_number :
-        print("It is too large！")
-    elif the_number >  guess_number:
-        print("It's too small!")
-    elif the_number == guess_number:
-        print("congratulations!")
-        exit(0)
+    except ValueError:
+        print("You must enter an integer!")
+
+    def Judgement_input():
+        if the_number < guess_number:
+            print("It's too large!")
+    elif the_number > guess_number:
+            print("It's too small!")
+        elif the_number == guess_number:
+            print("congratuations!")
+            exit(0)
